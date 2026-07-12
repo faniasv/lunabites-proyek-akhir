@@ -56,18 +56,23 @@ Aturan Output:
 
     try {
 
-        const response = await fetch("http://localhost:3001/api/rekomendasi", {
+        const apiKey = 'AQ.Ab8RN6I3yrF5PTUmjTjO1mwACwEWoD5j8G4hF3Ld9Ug3IfJhvw';
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent`;
+
+        const response = await fetch(url, {
 
             method: "POST",
 
             headers: {
-                "Content-Type": "application/json"
+                'Content-Type': 'application/json',
+                'x-goog-api-key': apiKey // API Key ditaruh di sini
             },
 
             body: JSON.stringify({
-                prompt
+                contents: [{
+                    parts: [{ text: prompt }]
+                }]
             })
-
         });
 
         if (!response.ok) {
