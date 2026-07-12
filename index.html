@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunaBites - Panduan Gizi Saat Menstruasi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Playfair Display untuk judul, Poppins untuk teks -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HERO SECTION (Background Gambar Penuh) -->
+    <header id="hero" class="hero-section">
+        <!-- Navbar menempel transparan di atas hero -->
+        <nav class="navbar">
+            <div class="nav-brand">luna.bites</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#aplikasi">Cari Nutrisi</a></li>
+                <li><a href="#riwayat-section">Riwayat</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>luna.bites</h1>
+            <p>Panduan nutrisi berbasi AI untuk meredakan gejala menstruasi, satu langkah pada satu waktu.</p>
+            <div class="hero-badges">
+                <span class="badge">Privacy-Friendly</span>
+                <span class="badge">Personalized AI</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT SECTION -->
+    <main id="aplikasi" class="app-section">
+        
+        <!-- Pemisah Warna Hijau Pastel -->
+        <div class="green-banner">
+            <h2>Supporting a healthier you</h2>
+        </div>
+
+        <!-- Form Section dengan background Peach -->
+        <section class="form-container">
+            <div class="form-header">
+                <h2>Not sure where to start?</h2>
+                <p>Ceritakan kondisimu, biarkan AI kami merekomendasikan nutrisi yang tepat.</p>
+            </div>
+
+            <div class="input-group">
+                <label for="fase-haid">Select your phase</label>
+                <select id="fase-haid">
+                    <option value="" disabled selected>Pilih Fase Menstruasi...</option>
+                    <option value="Menstruasi">Menstruasi (Hari 1-5)</option>
+                    <option value="Folikuler">Folikuler (Hari 6-14)</option>
+                    <option value="Ovulasi">Ovulasi (Sekitar Hari 14)</option>
+                    <option value="Luteal">Luteal (Hari 15-28)</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="gejala">Symptoms you feel</label>
+                <input type="text" id="gejala" placeholder="Contoh: Kram perut, kembung, mual..." autocomplete="off">
+            </div>
+
+            <button id="btn-cari" class="btn-primary">Cari Rekomendasi</button>
+        </section>
+
+        <!-- Bagian Hasil -->
+        <section id="hasil-rekomendasi" class="result-container hidden">
+            <!-- Hasil AI akan muncul di sini -->
+        </section>
+
+        <!-- Tombol Aksi PDF -->
+        <div class="aksi-hasil hidden">
+            <button id="btn-pdf" class="btn-outline">Simpan Resep (PDF)</button>
+        </div>
+
+        <!-- Riwayat Konsultasi -->
+        <section id="riwayat-section" class="riwayat-container">
+            <h2>Your Journey</h2>
+            <div id="list-riwayat"></div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-brand">luna.bites</h3>
+            <p>Proyek Akhir Basic Web AI | Perempuan Inovasi 2026 | faniasv</p>
+            <p class="disclaimer"><em>Disclaimer: LunaBites adalah panduan edukasi, bukan pengganti saran dokter medis.</em></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.6/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
